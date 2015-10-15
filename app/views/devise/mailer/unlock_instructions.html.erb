@@ -1,0 +1,9 @@
+<p>app/views/devise/mailer/unlock_instructions.html.erb</p>
+
+<p><%= @resource.email %></p>
+
+<p>何回もパスワード入力失敗したのでアカウント凍結したよ！</p>
+
+<p>と言っても、下のリンクをクリックしたら復活するけどね！　あと、１分間はログイン出来ないらしいよ！</p>
+
+<p><%= link_to 'アカウント復活', unlock_url(@resource, unlock_token: @token), target: :_blank %></p>

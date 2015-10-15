@@ -1,0 +1,18 @@
+<div>
+  app/views/devise/confirmations/new.html.erb
+</div>
+
+<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
+  <%= devise_error_messages! %>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "アカウント凍結解除メールを再送信するっすよ" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
